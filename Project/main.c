@@ -1,6 +1,40 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+void showClientMenu() {
+    int choice;
+    int isRunning = 1;
+
+    while (isRunning) {
+        printf("\n===== Client Menu =====\n1. View available currencies\n2. Current exchange rates\n3. Request a exchange\n4. View my transactions\n5. View my receipts\n6. Logout\nSelect an option: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("View available currencies selected.\n");
+                break;
+            case 2:
+                printf("Current exchange rates selected.\n");
+                break;
+            case 3:
+                printf("Request an exchange selected.\n");
+                break;
+            case 4:
+                printf("View my transactions selected.\n");
+                break;
+            case 5:
+                printf("View my receipts selected.\n");
+                break;
+            case 6:
+                printf("Logout selected. Exiting client menu.\n");
+                isRunning = 0;
+                break;
+            default:
+                printf("Invalid option. Please try again.\n");
+        }
+    }
+}
+
 void cahsierInterface() {
     int choice;
 
@@ -54,7 +88,6 @@ void cahsierInterface() {
     } while (choice != 7);
 }
 
-
 void login() {
     char email[50];
     char password[50];
@@ -94,6 +127,7 @@ void reg() {
 
     //Logic to check if the user is an admin or someone else
 }
+
 
 
 int main(void) {
