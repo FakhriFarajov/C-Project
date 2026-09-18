@@ -76,22 +76,23 @@
 # pragma endregion
 
 # pragma region task5
-// #include <stdio.h>
-// void checkOddNumber(int number) {
-//     if (number%2 == 0) printf("The number is even.\n");
-//     else printf("The number is odd.\n");
-// }
-//
-//
-// int main() {
-//     int number;
-//
-//     printf("Enter the number: ");
-//     scanf("%d", &number);
-//
-//     checkOddNumber(number);
-//     return 0;
-// }
+#include <stdio.h>
+int checkOddNumber(int number) {
+    if (number%2 == 0) {
+        return 1;
+    }
+    return 0;
+}
+
+int main() {
+    int number;
+
+    printf("Enter the number: ");
+    scanf("%d", &number);
+
+    checkOddNumber(number);
+    return 0;
+}
 # pragma endregion
 
 # pragma region task6
@@ -383,31 +384,31 @@
 
 # pragma region task18
 
-#include <stdio.h>
-int main() {
-    // get input value for operator
-    char op;
-    scanf("%c", &op);
-    // get input value of first and second
-    double first, second;
-    scanf("%lf %lf", &first, &second);
-    switch (op) {
-        case '+':
-            printf("%lf\n", first + second);
-            break;
-        case '-':
-            printf("%lf\n", first - second);
-            break;
-        case '*':
-            printf("%lf\n", first * second);
-            break;
-        case '/':
-            printf("%lf\n", first / second);
-            break;
-        default:
-            printf("Error!");
-    }
-    return 0;
-}
+// #include <stdio.h>
+// int main() {
+//     // get input value for operator
+//     char op;
+//     scanf("%c", &op);
+//     // get input value of first and second
+//     double first, second;
+//     scanf("%lf %lf", &first, &second);
+//     switch (op) {
+//         case '+':
+//             printf("%lf\n", first + second);
+//             break;
+//         case '-':
+//             printf("%lf\n", first - second);
+//             break;
+//         case '*':
+//             printf("%lf\n", first * second);
+//             break;
+//         case '/':
+//             printf("%lf\n", first / second);
+//             break;
+//         default:
+//             printf("Error!");
+//     }
+//     return 0;
+// }
 
 #pragma endregion
