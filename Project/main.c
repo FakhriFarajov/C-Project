@@ -64,8 +64,8 @@ int main(void) {
 void clientInterface() {
     int choice;
     int isRunning = 1;
-
-    while (isRunning) {
+ 
+    do {
         printf("\n===== Client Menu =====\n1. View available currencies\n2. Current exchange rates\n3. Request a exchange\n4. View my transactions\n5. View my receipts\n6. Logout\nSelect an option: ");
         scanf("%d", &choice);
 
@@ -92,7 +92,7 @@ void clientInterface() {
             default:
                 printf("Invalid option. Please try again.\n");
         }
-    }
+    } while (isRunning);
 }
 
 void cashierInterface() {
@@ -146,6 +146,83 @@ void cashierInterface() {
         }
 
     } while (choice != 7);
+}
+
+void managerInterface() {
+    int choice;
+    int isRunning = 1;
+
+    do {
+        printf("\n===== Manager Menu =====\n1. Create cashier account\n2. Disable cashier account\n3. Remove cashier account\n4. Add currency\n5. Update currency information\n6. Set exchange rate\n7. Update currency reserve\n8. Set critical minimum reserve\n9. View currency status\n10. Review refill requests\n11. View all transactions\n12. View cashier reports and profits\n13. Manage monthly cashier bonuses\n14. View low-reserve warnings\n15. Logout\nSelect an option: ");
+
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Create cashier account selected.\n");
+                break;
+
+            case 2:
+                printf("Disable cashier account selected.\n");
+                break;
+
+            case 3:
+                printf("Remove cashier account selected.\n");
+                break;
+
+            case 4:
+                printf("Add currency selected.\n");
+                break;
+
+            case 5:
+                printf("Update currency information selected.\n");
+                break;
+
+            case 6:
+                printf("Set exchange rate selected.\n");
+                break;
+
+            case 7:
+                printf("Update currency reserve selected.\n");
+                break;
+
+            case 8:
+                printf("Set critical minimum reserve selected.\n");
+                break;
+
+            case 9:
+                printf("View currency status selected.\n");
+                break;
+
+            case 10:
+                printf("Review refill requests selected.\n");
+                break;
+
+            case 11:
+                printf("View all transactions selected.\n");
+                break;
+
+            case 12:
+                printf("View cashier reports and profits selected.\n");
+                break;
+
+            case 13:
+                printf("Manage monthly cashier bonuses selected.\n");
+                break;
+
+            case 14:
+                printf("View low-reserve warnings selected.\n");
+                break;
+
+            case 15:
+                printf("Logout selected. Exiting manager menu.\n");
+                isRunning = 0;
+                break;
+
+            default:
+                printf("Invalid option. Please try again.\n");
+        }
+    } while (isRunning);
 }
 
 void login() {
@@ -555,79 +632,3 @@ void reg()
     //Logic to check if the user is an admin or someone else
 }
 
-void managerInterface(void) {
-    int choice;
-    int isRunning = 1;
-
-    while (isRunning) {
-        printf("\n===== Manager Menu =====\n1. Create cashier account\n2. Disable cashier account\n3. Remove cashier account\n4. Add currency\n5. Update currency information\n6. Set exchange rate\n7. Update currency reserve\n8. Set critical minimum reserve\n9. View currency status\n10. Review refill requests\n11. View all transactions\n12. View cashier reports and profits\n13. Manage monthly cashier bonuses\n14. View low-reserve warnings\n15. Logout\nSelect an option: ");
-
-        scanf("%d", &choice);
-
-        switch (choice) {
-            case 1:
-                printf("Create cashier account selected.\n");
-                break;
-
-            case 2:
-                printf("Disable cashier account selected.\n");
-                break;
-
-            case 3:
-                printf("Remove cashier account selected.\n");
-                break;
-
-            case 4:
-                printf("Add currency selected.\n");
-                break;
-
-            case 5:
-                printf("Update currency information selected.\n");
-                break;
-
-            case 6:
-                printf("Set exchange rate selected.\n");
-                break;
-
-            case 7:
-                printf("Update currency reserve selected.\n");
-                break;
-
-            case 8:
-                printf("Set critical minimum reserve selected.\n");
-                break;
-
-            case 9:
-                printf("View currency status selected.\n");
-                break;
-
-            case 10:
-                printf("Review refill requests selected.\n");
-                break;
-
-            case 11:
-                printf("View all transactions selected.\n");
-                break;
-
-            case 12:
-                printf("View cashier reports and profits selected.\n");
-                break;
-
-            case 13:
-                printf("Manage monthly cashier bonuses selected.\n");
-                break;
-
-            case 14:
-                printf("View low-reserve warnings selected.\n");
-                break;
-
-            case 15:
-                printf("Logout selected. Exiting manager menu.\n");
-                isRunning = 0;
-                break;
-
-            default:
-                printf("Invalid option. Please try again.\n");
-        }
-    }
-}
